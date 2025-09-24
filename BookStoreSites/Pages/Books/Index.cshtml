@@ -41,7 +41,10 @@
                 <td>@book.Publisher</td>
                 <td>@book.Price.ToString("C")</td>
                 <td>
-                    <a asp-page="./Edit" asp-route-id="@book.Id" class="btn btn-primary btn-sm">Edit</a>
+                    <div class="btn-group" role="group">
+                        <a asp-page="./Edit" asp-route-id="@book.Id" class="btn btn-primary btn-sm">Edit</a>
+                        <a asp-page="./Delete" asp-route-id="@book.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </div>
                 </td>
             </tr>
         }
